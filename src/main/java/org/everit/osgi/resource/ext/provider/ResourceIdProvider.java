@@ -17,13 +17,12 @@
 package org.everit.osgi.resource.ext.provider;
 
 /**
- * The Resource ID Provider component maps the previously created mapped principal to a Resource ID.
+ * The Resource ID Provider component maps an unique identifier to a Resource ID.
  */
 public interface ResourceIdProvider {
 
     /**
-     * Maps the given unique identifier to a Resource ID based on different data sources: such as database, LDAP, etc.
-     * It is also supported to combine different ResourceIdProviders to use multiple data sources.
+     * Maps the given unique identifier to a Resource ID.
      *
      * @param uniqueIdentifier
      *            The unique identifier to map as a Resource ID. Cannot be null.
