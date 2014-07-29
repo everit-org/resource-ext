@@ -16,6 +16,8 @@
  */
 package org.everit.osgi.resource.resolver;
 
+import java.util.Optional;
+
 /**
  * The Resource ID Resolver maps an unique identifier to a Resource ID.
  */
@@ -26,8 +28,9 @@ public interface ResourceIdResolver {
      *
      * @param uniqueIdentifier
      *            The unique identifier to map as a Resource ID. Cannot be null.
-     * @return The Resource ID defined by the unique identifier or <code>null</code> if it cannot be mapped.
+     * @return an {@link Optional} with the Resource ID defined by the unique identifier or an {@link Optional} with
+     *         <code>null</code> value if it cannot be mapped.
      */
-    Long getResourceId(String uniqueIdentifier);
+    Optional<Long> getResourceId(String uniqueIdentifier);
 
 }
